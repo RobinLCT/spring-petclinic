@@ -19,6 +19,8 @@
 
   <properties>
 
+      <checkstyle.skip>true</checkstyle.skip>
+      
     <!-- Generic properties -->
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -225,7 +227,9 @@
 
       <!-- Spring Boot Actuator displays build-related information if a git.properties
         file is present at the classpath -->
-      <plugin>
+     
+     <!-- 
+     <plugin>
         <groupId>pl.project13.maven</groupId>
         <artifactId>git-commit-id-plugin</artifactId>
         <executions>
@@ -245,6 +249,10 @@
         </configuration>
       </plugin>
 
+     
+     -->
+     
+     
       <plugin>
         <groupId>ro.isdc.wro4j</groupId>
         <artifactId>wro4j-maven-plugin</artifactId>
@@ -277,6 +285,16 @@
           </dependency>
         </dependencies>
       </plugin>
+      
+      <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> <version>2.4</version>
+          <executions>
+              <execution>
+                  <id>copy-dependencies</id> <phase>package</phase> <goals><goal>copy-dependencies</goal></goals>
+              </execution>
+          </executions>
+      </plugin>
+      
+      
     </plugins>
   </build>
 
