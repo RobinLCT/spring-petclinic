@@ -1,3 +1,21 @@
+# The images for hw8
+
+## DOCKER
+
+- Your dockerfile. Please provide a link to this file rather than a screen capture. 
+
+[Dockerfile](Dockerfile)
+
+- Your running docker instance as shown by a ps command.
+
+![psCommand](images/psCommand.png)
+
+- Your browser accessing the main page of the website from your local container.
+
+![fromContainer](images/fromContainer.png)
+
+
+
 # The images for hw5
 
 **Directory of images:** [images](images).
